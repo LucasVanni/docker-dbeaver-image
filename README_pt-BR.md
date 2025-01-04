@@ -2,7 +2,7 @@
 
 # DBeaver Cloud Docker Image
 
-Esta imagem Docker é baseada no DBeaver Cloud e foi otimizada para reduzir o custo computacional. A imagem utiliza o `alpine:latest` como base, garantindo uma pegada leve e eficiente. Para mais informações, visite o [Docker Hub](https://hub.docker.com/r/lucasvanni/dbeaver-more-cleaning) do projeto.
+Esta imagem Docker é baseada no DBeaver Cloud e foi otimizada para reduzir o custo computacional. A imagem utiliza o `alpine:latest` como base, garantindo uma pegada leve e eficiente. Para mais informações, visite o <a href="https://hub.docker.com/r/lucasvanni/dbeaver-more-cleaning" target="_blank">Docker Hub</a> do projeto.
 
 ## Características
 
