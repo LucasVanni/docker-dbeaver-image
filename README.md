@@ -2,7 +2,7 @@
 
 # DBeaver Cloud Docker Image
 
-This Docker image is based on DBeaver Cloud and has been optimized to reduce computational costs. The image uses `alpine:latest` as its base, ensuring a lightweight and efficient footprint.
+This Docker image is based on DBeaver Cloud and has been optimized to reduce computational costs. The image uses `alpine:latest` as its base, ensuring a lightweight and efficient footprint. For more information, visit the project's [Docker Hub](https://hub.docker.com/repository/docker/lucasvanni/dbeaver-more-cleaning).
 
 ## Features
 
@@ -12,11 +12,39 @@ This Docker image is based on DBeaver Cloud and has been optimized to reduce com
 - **Driver Elimination**: Removes unnecessary database drivers to optimize performance.
 - **Startup Script**: Configured to run the `run-server.sh` script on startup.
 
+## Drivers Removed
+
+The following database drivers have been removed to optimize the performance of the image:
+
+- clickhouse_com
+- db2
+- db2-jt400
+- duckdb
+- h2
+- jaybird
+- trino
+- kyuubi
+- mssql
+
+## Drivers that are in the image
+
+- postgresql
+- mariadb
+- oracle
+- mysql
+
+## Plugins Removed
+
+The following plugins have been removed to optimize the performance and security of the image:
+
+- org.jkiss.bundle.logback_1.0.2
+- com.dbeaver.jdbc.driver.libsql_1.0.3.202501040445
+
 ## Usage Instructions
 
 1. **Build the Image**: 
    ```bash
-   docker build -t dbeaver-cloud-optimized .
+   docker build --build-arg DRIVERS_TO_ELIMINATE="clickhouse_com db2 db2-jt400 duckdb h2 jaybird trino kyuubi mssql" -t dbeaver-cloud-optimized .
    ```
 
 2. **Run the Container**:
